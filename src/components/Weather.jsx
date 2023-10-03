@@ -2,12 +2,11 @@ import axios from "axios";
 import React, {useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-const dotenv = require('dotenv');
-dotenv.config();
-const apiKey=process.env.apikey;
+const apiKey=process.env.REACT_APP_apikey;
 
 
 function Weather() {
+    //console.log(apiKey);
     const unit="metric";
     const [city, setCity]=useState("");
     const [temp, setTemp]=useState("");
